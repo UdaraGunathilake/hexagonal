@@ -10,26 +10,33 @@ import org.springframework.stereotype.Repository;
 import com.baeldung.hexagonal.core.model.Notification;
 import com.baeldung.hexagonal.port.out.NotificationRepository;
 
+/**
+ * Output adapter : Implementation of Repository
+ * 
+ * @author : Udara Gunathilake
+ * @email : udara.dhammika@gmail.com
+ * @date : Feb 17, 2020
+ */
 @Repository
-public class NotificationRepositoryImplementation implements NotificationRepository{
+public class NotificationRepositoryImplementation implements NotificationRepository {
 
-    protected static Map<Integer, Notification> notificatonList = new HashMap<>();	
-    
+    protected static Map<Integer, Notification> notificatonList = new HashMap<>();
+
     @Override
     public void createNotification(Notification notification) {
 	notificatonList.put(notification.getId(), notification);
-	
+
     }
 
     @Override
     public Notification getNotification(int id) {
-	
+
 	return notificatonList.get(id);
     }
 
     @Override
-    public List<Notification> getAllNotifications() {	
-	
+    public List<Notification> getAllNotifications() {
+
 	return notificatonList.values().stream().collect(Collectors.toList());
     }
 

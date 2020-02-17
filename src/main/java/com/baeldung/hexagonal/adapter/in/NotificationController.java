@@ -10,6 +10,14 @@ import com.baeldung.hexagonal.core.model.Notification;
 import com.baeldung.hexagonal.port.in.NotificationService;
 import com.baeldung.hexagonal.web.NotificationWebInterface;
 
+/**
+ * Input adapter : Controller class for {@link: Notification}
+ * 
+ * @author : Udara Gunathilake
+ * @email : udara.dhammika@gmail.com
+ * @date : Feb 17, 2020
+ */
+
 @RestController
 @RequestMapping("/notification")
 public class NotificationController implements NotificationWebInterface {

@@ -9,6 +9,13 @@ import com.baeldung.hexagonal.adapter.out.NotificationRepositoryImplementation;
 import com.baeldung.hexagonal.core.model.Notification;
 import com.baeldung.hexagonal.port.in.NotificationService;
 
+/**
+ * Implementation of Service
+ * 
+ * @author : Udara Gunathilake
+ * @email : udara.dhammika@gmail.com
+ * @date : Feb 17, 2020
+ */
 @Service
 public class NotificationServiceImpl implements NotificationService {
 

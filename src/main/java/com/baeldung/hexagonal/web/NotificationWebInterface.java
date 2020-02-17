@@ -9,13 +9,20 @@ import org.springframework.web.bind.annotation.RequestBody;
 
 import com.baeldung.hexagonal.core.model.Notification;
 
+/**
+ * Web interface
+ * 
+ * @author : Udara Gunathilake
+ * @email : udara.dhammika@gmail.com
+ * @date : Feb 17, 2020
+ */
 public interface NotificationWebInterface {
 
     @PostMapping
     void createNotification(@RequestBody Notification notification);
 
     @GetMapping("/{id}")
-    public Notification getNotification(@PathVariable int id);	
+    public Notification getNotification(@PathVariable int id);
 
     @GetMapping
     public List<Notification> getAllNotifications();

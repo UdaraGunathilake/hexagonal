@@ -18,12 +18,12 @@ import com.baeldung.hexagonal.core.model.Notification;
  */
 public interface NotificationWebInterface {
 
-    @PostMapping
-    void createNotification(@RequestBody Notification notification);
+	@PostMapping
+	void createNotification(@RequestBody Notification notification);
 
-    @GetMapping("/{id}")
-    public Notification getNotification(@PathVariable int id);
+	@GetMapping("/{id}")
+	public Notification getNotification(@PathVariable int id);
 
-    @GetMapping
-    public List<Notification> getAllNotifications();
+	@GetMapping
+	public List<Notification> getAllNotifications();
 }

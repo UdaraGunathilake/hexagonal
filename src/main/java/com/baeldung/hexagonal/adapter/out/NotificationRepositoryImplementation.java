@@ -20,24 +20,24 @@ import com.baeldung.hexagonal.port.out.NotificationRepository;
 @Repository
 public class NotificationRepositoryImplementation implements NotificationRepository {
 
-    protected static Map<Integer, Notification> notificatonList = new HashMap<>();
+	protected static Map<Integer, Notification> notificatonList = new HashMap<>();
 
-    @Override
-    public void createNotification(Notification notification) {
-	notificatonList.put(notification.getId(), notification);
+	@Override
+	public void createNotification(Notification notification) {
+		notificatonList.put(notification.getId(), notification);
 
-    }
+	}
 
-    @Override
-    public Notification getNotification(int id) {
+	@Override
+	public Notification getNotification(int id) {
 
-	return notificatonList.get(id);
-    }
+		return notificatonList.get(id);
+	}
 
-    @Override
-    public List<Notification> getAllNotifications() {
+	@Override
+	public List<Notification> getAllNotifications() {
 
-	return notificatonList.values().stream().collect(Collectors.toList());
-    }
+		return notificatonList.values().stream().collect(Collectors.toList());
+	}
 
 }

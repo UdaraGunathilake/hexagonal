@@ -13,10 +13,10 @@ import com.baeldung.hexagonal.core.model.Notification;
  */
 public interface NotificationService {
 
-    void createNotification(Notification notification);
+	void createNotification(Notification notification);
 
-    Notification getNotification(int id);
+	Notification getNotification(int id);
 
-    List<Notification> getAllNotifications();
+	List<Notification> getAllNotifications();
 
 }

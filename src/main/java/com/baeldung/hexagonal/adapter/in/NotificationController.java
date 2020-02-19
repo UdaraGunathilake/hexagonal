@@ -22,23 +22,23 @@ import com.baeldung.hexagonal.web.NotificationWebInterface;
 @RequestMapping("/notification")
 public class NotificationController implements NotificationWebInterface {
 
-    @Autowired
-    NotificationService notificationService;
+	@Autowired
+	NotificationService notificationService;
 
-    @Override
-    public void createNotification(Notification notification) {
-	notificationService.createNotification(notification);
+	@Override
+	public void createNotification(Notification notification) {
+		notificationService.createNotification(notification);
 
-    }
+	}
 
-    @Override
-    public Notification getNotification(int id) {
-	return notificationService.getNotification(id);
-    }
+	@Override
+	public Notification getNotification(int id) {
+		return notificationService.getNotification(id);
+	}
 
-    @Override
-    public List<Notification> getAllNotifications() {
-	return notificationService.getAllNotifications();
-    }
+	@Override
+	public List<Notification> getAllNotifications() {
+		return notificationService.getAllNotifications();
+	}
 
 }

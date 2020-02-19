@@ -5,9 +5,9 @@ import java.util.List;
 import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.stereotype.Service;
 
-import com.baeldung.hexagonal.adapter.out.NotificationRepositoryImplementation;
 import com.baeldung.hexagonal.core.model.Notification;
 import com.baeldung.hexagonal.port.in.NotificationService;
+import com.baeldung.hexagonal.port.out.NotificationRepository;
 
 /**
  * Implementation of Service
@@ -19,25 +19,25 @@ import com.baeldung.hexagonal.port.in.NotificationService;
 @Service
 public class NotificationServiceImpl implements NotificationService {
 
-    @Autowired
-    private NotificationRepositoryImplementation notificationRepository;
+	@Autowired
+	private NotificationRepository notificationRepository;
 
-    @Override
-    public void createNotification(Notification notification) {
-	notificationRepository.createNotification(notification);
+	@Override
+	public void createNotification(Notification notification) {
+		notificationRepository.createNotification(notification);
 
-    }
+	}
 
-    @Override
-    public Notification getNotification(int id) {
+	@Override
+	public Notification getNotification(int id) {
 
-	return notificationRepository.getNotification(id);
-    }
+		return notificationRepository.getNotification(id);
+	}
 
-    @Override
-    public List<Notification> getAllNotifications() {
+	@Override
+	public List<Notification> getAllNotifications() {
 
-	return notificationRepository.getAllNotifications();
-    }
+		return notificationRepository.getAllNotifications();
+	}
 
 }
